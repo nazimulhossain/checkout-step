@@ -1,0 +1,193 @@
+.card {
+  display: grid;
+  grid-template-columns: 0.3fr 0.7fr;
+  gap: 18.6rem;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  &__details {
+    background-image: url('../../images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 44.7rem;
+    height: 24.5rem;
+    margin-top: 25%;
+    margin-left: 16.4rem;
+    padding: 3.2rem;
+    border-radius: 0.8rem;
+    @include respond(phone) {
+      margin-left: 4.4rem;
+      margin-top: 40%;
+      z-index: 10;
+    }
+    @include respond(phone-s) {
+      margin-top: 35.5%;
+    }
+  }
+
+  &__aside {
+    background-image: url('../../images/bg-main-desktop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include respond(phone) {
+      background-image: url('../../images/bg-main-mobile.png');
+      height: 100%;
+    }
+
+    &-cvc {
+      background-image: url('../../images/bg-card-back.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 44.7rem;
+      height: 24.5rem;
+      font-size: 1.4rem;
+      color: $white;
+      border-radius: 0.8rem;
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      display: grid;
+      justify-content: end;
+      align-items: center;
+      @include respond(phone) {
+        top: 24%;
+        left: 15%;
+      }
+      @include respond(phone-s) {
+        top: 15%;
+      }
+    }
+    img {
+      display: block;
+    }
+
+    &-logo {
+      height: 3.2rem;
+      margin-bottom: 6.4rem;
+    }
+    &-number {
+      font-size: 3.2rem;
+      color: $white;
+      margin-bottom: 3.2rem;
+      width: 100%;
+    }
+
+    &-name {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: $white;
+      letter-spacing: 1px;
+    }
+
+    &-expiry {
+      font-size: 1.4rem;
+      color: $white;
+    }
+  }
+
+  &__main {
+    display: grid;
+    place-items: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    input {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $very-dark-violet;
+      padding: 1.2rem;
+      border-width: 1px;
+      border-color: #ddd;
+      border-radius: 0.8rem;
+
+      @include respond(phone-s) {
+        padding: 1.6rem;
+      }
+    }
+
+    input:focus {
+      outline: none;
+      border-width: 2px;
+      border-color: $purple;
+      cursor: pointer;
+      caret-color: $very-dark-violet;
+      line-height: 1.2;
+    }
+    input::placeholder {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      color: $light-grayish-violet;
+    }
+
+    input#month,
+    input#year {
+      width: 90%;
+      // margin-right: 0.4rem;
+    }
+    input#year {
+      margin-right: 2.4rem;
+    }
+
+    &-name,
+    &-number {
+      width: 100%;
+    }
+
+    [type='number']::-webkit-inner-spin-button,
+    [type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    label {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      color: $very-dark-violet;
+      margin-bottom: 1rem;
+    }
+
+    &-expiry {
+      display: grid;
+      grid-template-columns: 0.2fr 0.2fr 0.6fr;
+    }
+  }
+}
+
+.error {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: $red;
+}
+
+.form__input-cvc {
+  margin-left: 2.4rem;
+}
+
+.form__input-year {
+  margin-left: 0.5rem;
+}
+
+.border input {
+  border-color: $red;
+}
+
+.cvc {
+  display: inline-block;
+  margin-right: 6.4rem;
+}

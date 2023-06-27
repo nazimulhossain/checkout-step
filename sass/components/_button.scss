@@ -1,0 +1,29 @@
+.button {
+  &:link,
+  &:visited {
+    display: block;
+    font-size: 1.8rem;
+    padding: 1.2rem 2.4rem;
+    color: $white;
+    background-color: $very-dark-violet;
+    border-radius: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    @include respond(phone) {
+      padding: 2.4rem;
+      font-size: 2rem;
+    }
+  }
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+    background-color: hsla(278, 83%, 32%, 0.912);
+  }
+
+  &--continue {
+    width: 150%;
+  }
+}

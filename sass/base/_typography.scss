@@ -1,0 +1,18 @@
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: $very-dark-violet;
+}
+
+.heading-description {
+  font-size: 1.8rem;
+  color: $dark-grayish-violet;
+  margin-top: -2.4rem;
+}

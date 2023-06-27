@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <aside class="card__aside">
+          <div class="card__details">
+            <img src="./images/card-logo.svg" class="card__aside-logo" />
+            <div class="card__aside-number">
+              0000&nbsp;0000&nbsp;0000&nbsp;0000
+            </div>
+            <div class="flex">
+              <div class="card__aside-name">JANE APPLESEED</div>
+              <div class="card__aside-expiry">
+                <div>
+                  <span class="card__aside-month">00</span><span>/</span
+                  ><span class="card__aside-year">00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__aside-cvc">
+            <span class="cvc">000</span>
+          </div>
+        </aside>
+        <div class="card__main">
+          <form class="card__form" novalidate>
+            <div class="form__input-name">
+              <label for="name">Cardholder Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="e.g. Jane Appleseed"
+                class="card__form-name"
+                required
+              />
+            </div>
+            <div class="form__input-number">
+              <label for="number">Card Number</label>
+              <input
+                type="number"
+                id="number"
+                placeholder="e.g. 1234 5678 9123 0000"
+                class="card__form-number"
+                maxlength="16"
+                required
+              />
+            </div>
+
+            <div class="card__form-expiry">
+              <div class="form__input-month">
+                <label for="month">Exp.Date</label>
+
+                <input
+                  type="number"
+                  id="month"
+                  placeholder="MM"
+                  class="card__form-month"
+                  maxlength="2"
+                  required
+                />
+              </div>
+              <div class="form__input-year">
+                <label for="year">(MM/YY)</label>
+                <input
+                  type="number"
+                  id="year"
+                  placeholder="YY"
+                  class="card__form-year"
+                  maxlength="2"
+                  required
+                />
+              </div>
+
+              <div class="form__input-cvc">
+                <label for="cvc">cvc</label>
+                <input
+                  type="number"
+                  id="cvc"
+                  placeholder="e.g. 123"
+                  class="card__form-cvc"
+                  maxlength="3"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <a href="#" class="button">Confirm</a>
+            </div>
+          </form>
+          <div class="thank-you hidden">
+            <img src="./images/icon-complete.svg" alt="icon complete" />
+            <h2 class="heading-secondary">Thank you!</h2>
+            <p class="heading-description">We've added your card details</p>
+            <a href="#" class="button button--continue">Continue</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/nazimulhossain"
+          >Nazimul Hossain</a
+        >.
+      </div>
+    </footer> -->
+    <script src="./script.js"></script>
+  </body>
+</html>
