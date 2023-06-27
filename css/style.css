@@ -50,7 +50,7 @@ body {
       grid-template-columns: 1fr;
       gap: 6.4rem; } }
   .card__details {
-    background-image: url("../../images/bg-card-front.png");
+    background-image: url("./../images/bg-card-front.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 44.7rem;
@@ -68,7 +68,7 @@ body {
       .card__details {
         margin-top: 35.5%; } }
   .card__aside {
-    background-image: url("../../images/bg-main-desktop.png");
+    background-image: url("./../images/bg-main-desktop.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -78,10 +78,10 @@ body {
     position: relative; }
     @media (max-width: 37.5em) {
       .card__aside {
-        background-image: url("../../images/bg-main-mobile.png");
+        background-image: url("./../images/bg-main-mobile.png");
         height: 100%; } }
     .card__aside-cvc {
-      background-image: url("../../images/bg-card-back.png");
+      background-image: url("./../images/bg-card-back.png");
       background-repeat: no-repeat;
       background-size: cover;
       width: 44.7rem;
